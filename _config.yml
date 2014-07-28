@@ -4,8 +4,8 @@ disqus_shortname: dataintelligence
 reading_time:     true
 words_per_minute: 200
 #Your site's domain goes here. Leave localhost server or blank when working locally.
-#url:              http://andrewcstewart.github.io/
-url:              http://www.andrewcstewart.com/
+url:              http://andrewcstewart.github.io/
+# url:              http://www.andrewcstewart.com/
 
 # Owner/author information
 owner:
