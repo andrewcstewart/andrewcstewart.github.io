@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My Awesome Post"
+title: "First post using Jekyll"
 modified: 2014-07-27 17:13:51 -0500
 tags: [test]
 image:
