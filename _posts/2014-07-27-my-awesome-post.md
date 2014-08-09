@@ -11,13 +11,14 @@ comments:
 share:
 ---
 
-What's up world
+This is a test post
 
-### Part II ###
+### What's up world! ###
 
-This is my first test blog post using the 'rake new_post' command.
+This is my first test blog post using jekyll.
 
-{% highlight python %}
-def myfunc1():
-  pass
+Post initiated with...
+
+{% highlight shell %}
+rake new_post
 {% endhighlight %}
