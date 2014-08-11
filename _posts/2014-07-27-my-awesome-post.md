@@ -11,7 +11,7 @@ comments:
 share:
 ---
 
-This is a test post
+This is a test post.
 
 ### What's up world! ###
 
