@@ -19,6 +19,6 @@ This is my first test blog post using jekyll.
 
 Post initiated with...
 
-{% highlight shell %}
+{% highlight bash %}
 rake new_post
 {% endhighlight %}
