@@ -117,6 +117,22 @@ events:
   - image: "/img/timeline/baracktocat.jpg"
     date: "September 2007 - August 2013"
     description: "Started coding"
+  - image: "/img/timeline/twist.jpg"
+    date: "September 2015 - Present"
+    description: "Synthetic biology"
+  - image: "/img/timeline/veracyte.jpg"
+    date: "July 2014 - September 2015"
+    description: "Using machine learning to develop cancer diagnostics"
+  - image: "/img/timeline/si.jpg"
+    date: "January 2013 - July 2014"
+    description: "Genomics at the Smithsonian"
+  - image: "/img/timeline/keygene.jpg"
+    date: "January 2010 - December 2012"
+    description: "Genetic engineering plants"
+  - image: "/img/timeline/nmrc.jpg"
+    date: "June 2005 - December 2009"
+    description: "Biodefense research"        
+
 
 # First image of the Timeline
 
