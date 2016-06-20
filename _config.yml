@@ -120,18 +120,18 @@ events:
   - image: "/img/timeline/twist.jpg"
     date: "September 2015 - Present"
     description: "Synthetic biology"
-  - image: "/img/timeline/veracyte.jpg"
+  - image: "/img/timeline/veracyte2.jpg"
     date: "July 2014 - September 2015"
     description: "Using machine learning to develop cancer diagnostics"
-  - image: "/img/timeline/si.jpg"
+  - image: "/img/timeline/si.png"
     date: "January 2013 - July 2014"
     description: "Genomics at the Smithsonian"
-  - image: "/img/timeline/keygene.jpg"
+  - image: "/img/timeline/keygene2.jpg"
     date: "January 2010 - December 2012"
     description: "Genetic engineering plants"
-  - image: "/img/timeline/nmrc.jpg"
+  - image: "/img/timeline/nmrc.png"
     date: "June 2005 - December 2009"
-    description: "Biodefense research"        
+    description: "Biodefense research"
 
 
 # First image of the Timeline
