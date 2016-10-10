@@ -31,8 +31,8 @@ force-https: True
 lang: "en"
 author: "Andrew Stewart"
 title: "{ Andrew Stewart }"
-description: "Blog and website of John Smith, blogging mainly for tech. Opinions expressed are mine."
-keywords: "smith, jones, personal, jekyll, theme"
+description: "Blog and website of Andrew Stewart, blogging mainly for sci/tech. Opinions expressed are mine."
+# keywords: "smith, jones, personal, jekyll, theme"
 favicon: "/img/favicon.ico"
 
 ################
@@ -56,7 +56,7 @@ start-delay: 200
 delete-delay: 5000
 lines: # You can add HTML Tags in the Text
   - text: "Data science, machine learning, artificial intelligence."
-  - text: "test"
+  - text: "I should put some witty quotes here."
 
 me-img: "/img/me2.png"
 
@@ -146,7 +146,7 @@ email: "your@email.here"
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
 # if the author_blurb is not set, then this feature is skipped
-author_blurb: "John Smith is an awesome person. He lives in Flatland, where he works on two-dimensional engineering projects. In his spare time, John likes to eat cotton candy."
+author_blurb: "Data scientist with interests in biology, economics, political science, and other complex systems."
 author_blurb_image: "/img/author.png"
 
 ##################
@@ -154,12 +154,25 @@ author_blurb_image: "/img/author.png"
 ##################
 
 social:
-  - title: "linkedin"
-    url: "https://www.linkedin.com/in/andrewcollinstewart"
+
+  - title: "medium"
+    url: "https://medium.com/@andrewcstewart"
   - title: "twitter"
     url: "https://twitter.com/andrewcstewart"
+  - title: "linkedin"
+    url: "https://www.linkedin.com/in/andrewcollinstewart"
   - title: "github"
     url: "https://github.com/andrewcstewart"
+  - title: "stack-overflow"
+    url: "http://stackoverflow.com/users/368666/andrew-stewart"
+  - title: "trello"
+    url: "https://trello.com/andrewcstewart"
+  - title: "area-chart"
+    url: "https://public.tableau.com/profile/andrew.stewart5476#!/"
+  - title: "spotify"
+    url: "https://open.spotify.com/user/123043286"
+  - title: "soundcloud"
+    url: "https://soundcloud.com/andrew-c-stewart"
   - title: "rss"
     url: "/feed.xml"
 
