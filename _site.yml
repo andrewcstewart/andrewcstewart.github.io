@@ -3,6 +3,7 @@ title: "Andrew Stewart's Technical Blog"
 description: |
   Andrew Stewart's Technical Blog
 output_dir: "docs"
+base_url: https://andrewcstewart.github.io/
 navbar:
   right:
     - text: "Home"
