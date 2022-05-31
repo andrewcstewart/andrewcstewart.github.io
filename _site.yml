@@ -2,7 +2,7 @@ name: "."
 title: "Andrew Stewart's Technical Blog"
 description: |
   Andrew Stewart's Technical Blog
-output_dir: "_site"
+output_dir: "docs"
 navbar:
   right:
     - text: "Home"
