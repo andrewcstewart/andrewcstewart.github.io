@@ -1,5 +1,81 @@
 ---
-title: "Andrew Stewart's Technical Blog"
-site: distill::distill_website
-listing: posts
+title: "Andrew Stewart"
+image: "images/andrew.png"
+links:
+  - label: LinkedIn
+    url: "https://www.linkedin.com/in/andrewcollinstewart/"
+  - label: Twitter
+    url: "https://twitter.com/andrewcstewart"
+  - label: GitHub
+    url: "https://github.com/andrewcstewart"
+  - label: Medium
+    url: "https://medium.com/@andrewcstewart"
+  - label: ResearchGate
+    url: "https://www.researchgate.net/profile/Andrew_Stewart48"
+  - label: Email
+    url: "mailto:email@email.com"
+  - label: Calendly
+    url: "https://calendly.com/andrew-c-stewart"
+output:
+  postcards::trestles
+site: distill::distill_website  
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(fontawesome)
+``` 
+ 
+<br>
+
+Data scientist with a strong background in applied research and development in computational biology, scientific computing, machine learning, and statistics. Passionate about improving business processes through sound experimental design and analysis.
+
+<br>
+
+
+```{css, echo = FALSE}
+.columnname {
+  font-size: 1.4rem; 
+  font-weight: 600;
+}
+.grad-item {
+  list-style: none; 
+  background-image: url(graduation-cap-solid.png); 
+  background-repeat: no-repeat;  
+  background-size: 1.2rem; 
+  padding-left: 2rem;
+}
+.grad-location {
+  font-size: 0.8rem;
+  color: grey;
+}
+```
+
+
+:::: {style="display: grid; grid-template-columns: 40% 50%; grid-column-gap: 30px; line-height: 1.5rem;"}
+
+::: {}
+<span class = "columnname"> Interests </span>
+
+
+* Artificial Intelligence
+* Machine Learning
+* Computational Statistics
+* Evolutionary Algorithms
+
+:::
+
+::: {}
+<span class = "columnname"> Education </span>
+
+
+<ul>
+ 
+<li class = "grad-item"> `r fa(name = "graduation-cap")` M.S. in Computer Science, 2015 <br>
+<p class = "grad-location"> Johns Hopkins University </p> </li>
+<li class = "grad-item"> `r fa(name = "graduation-cap")` B.S. in Biology, 2006 <br> <p class = "grad-location"> University of Maryland, College Park </p> 
+</li>
+
+</ul>
+:::
+::::
