@@ -6,6 +6,9 @@ author:
   - name: Andrew Stewart
     url: https://example.com/norajones
 date: 2022-05-29
+categories:
+  - data engineering
+  - packages
 output:
   distill::distill_article:
     self_contained: false

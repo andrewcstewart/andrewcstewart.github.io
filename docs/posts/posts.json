@@ -5,15 +5,35 @@
     "description": "Welcome to our new blog, Andrew Stewart's Technical Blog. We hope you enjoy \nreading what we have to say!",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Andrew Stewart",
+        "url": {}
       }
     ],
     "date": "2022-05-31",
     "categories": [],
     "contents": "\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-05-31T23:02:46+00:00",
+    "last_modified": "2022-06-12T17:35:56+00:00",
+    "input_file": {}
+  },
+  {
+    "path": "posts/2022-05-31-new-meltano-plugin-files-gitpod/",
+    "title": "New Meltano plugin: files-gitpod",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "Andrew Stewart",
+        "url": "https://example.com/norajones"
+      }
+    ],
+    "date": "2022-05-29",
+    "categories": [
+      "data engineering",
+      "packages"
+    ],
+    "contents": "\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-06-12T17:37:55+00:00",
     "input_file": {}
   }
 ]

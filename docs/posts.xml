@@ -10,12 +10,22 @@
     <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate>
     <item>
       <title>Welcome to Andrew Stewart's Technical Blog</title>
-      <dc:creator>Nora Jones</dc:creator>
+      <dc:creator>Andrew Stewart</dc:creator>
       <link>https://andrewcstewart.github.io/posts/welcome</link>
       <description>Welcome to our new blog, Andrew Stewart's Technical Blog. We hope you enjoy 
 reading what we have to say!</description>
       <guid>https://andrewcstewart.github.io/posts/welcome</guid>
       <pubDate>Tue, 31 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>New Meltano plugin: files-gitpod</title>
+      <dc:creator>Andrew Stewart</dc:creator>
+      <link>https://andrewcstewart.github.io/posts/2022-05-31-new-meltano-plugin-files-gitpod</link>
+      <description>A short description of the post.</description>
+      <category>data engineering</category>
+      <category>packages</category>
+      <guid>https://andrewcstewart.github.io/posts/2022-05-31-new-meltano-plugin-files-gitpod</guid>
+      <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
     </item>
   </channel>
 </rss>

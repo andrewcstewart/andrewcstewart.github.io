@@ -9,7 +9,7 @@ links:
   - label: GitHub
     url: "https://github.com/andrewcstewart"
   - label: Medium
-    url: "https://medium.com/@andrewcstewart"
+    url: "https://bit.ly/39o4tKD"
   - label: ResearchGate
     url: "https://www.researchgate.net/profile/Andrew_Stewart48"
   - label: Email
