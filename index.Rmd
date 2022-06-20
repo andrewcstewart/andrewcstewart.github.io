@@ -3,8 +3,10 @@ title: "Andrew Stewart"
 image: "images/andrew.png"
 links:
   - label: LinkedIn
+    icon: linkedin
     url: "https://www.linkedin.com/in/andrewcollinstewart/"
   - label: Twitter
+    icon: twitter
     url: "https://twitter.com/andrewcstewart"
   - label: GitHub
     url: "https://github.com/andrewcstewart"

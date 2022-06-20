@@ -1,0 +1,70 @@
+---
+title: "Projects"
+description: |
+  A list of projects.
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(distilltools)
+```
+
+## Projects
+
+### ds4fnp
+
+Data Stacks For Fun & Nonprofits is a series of articles and tutorials aimed towards designing and implementing a modern data stack using open source and open core components. The DS4FNP stack is intended to be accessible enough for education purposes (both in terms of costs and laptop-deployable), but suitably scalable as a mature analytics architecture for organizations of all sizes.
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/ds4fnp")`
+`r icon_link("globe", "Website", "https://andrewcstewart.github.io/ds4fnp/")`
+
+## `awesome democracy data`
+
+A curated list of awesome data sources related to elections, electoral reforms, and democratic political systems.
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/awesome-democracy-data")`
+`r icon_link("globe", "Website", "https://andrewcstewart.github.io/awesome-democracy-data/")`
+
+## Packages
+
+## `target-athena`
+
+Singer.io Target for AWS Athena. 
+
+`r icon_link("github", "Code", "https://github.com/MeltanoLabs/target-athena")`
+
+## `files-kedro`
+
+Meltano project file bundle plugin for Kedro.
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/files-kedro")`
+
+## `files-gitpod`
+
+Meltano project file bundle for [Gitpod](https://www.gitpod.io/).
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/files-gitpod")`
+
+### [files-gha-ecr](https://github.com/andrewcstewart/files-gha-ecr)
+
+Meltano project file bundle for Github Actions CI/CD that publishes to Amazon ECR.
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/files-gha-ecr")`
+
+### [dbt-uaparser](https://github.com/andrewcstewart/dbt-uaparser)
+
+dbt package with macros for parsing User Agent strings.
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/dbt-uaparser")`
+
+
+# Misc
+
+## `DIYA` (Do It Yourself Annotator)
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/diya")`
+`r icon_link("pubmed", "PubMed", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2660880/")`
+
+
+
+

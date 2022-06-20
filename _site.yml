@@ -11,7 +11,13 @@ navbar:
       href: index.html
     - text: "Posts"
       href: posts.html
-output: distill::distill_article
+    - text: "Projects"
+      href: projects.html
+output:
+  distill::distill_article:
+    includes:
+      in_header:
+      - header.html
 collections:
   posts:
     authors_metadata: false

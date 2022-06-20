@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
   <meta name="generator" content="distill" />
-  <link rel="alternate" type="application/rss+xml" href="https://andrewcstewart.github.io/posts.xml" />
 
   <style type="text/css">
   /* Hide doc at startup (prevent jankiness while JS renders/transforms) */
@@ -89,26 +88,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>Andrew Stewart: Andrew Stewart's Technical Blog</title>
+  <title>Andrew Stewart: Projects</title>
 
+  <meta property="description" itemprop="description" content="A list of projects."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Andrew Stewart: Andrew Stewart&#39;s Technical Blog"/>
+  <meta property="og:title" content="Andrew Stewart: Projects"/>
   <meta property="og:type" content="article"/>
+  <meta property="og:description" content="A list of projects."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Andrew Stewart"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Andrew Stewart: Andrew Stewart&#39;s Technical Blog"/>
+  <meta property="twitter:title" content="Andrew Stewart: Projects"/>
+  <meta property="twitter:description" content="A list of projects."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","site","listing"]}},"value":[{"type":"character","attributes":{},"value":["Andrew Stewart's Technical Blog"]},{"type":"character","attributes":{},"value":["distill::distill_website"]},{"type":"character","attributes":{},"value":["posts"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","output"]}},"value":[{"type":"character","attributes":{},"value":["Projects"]},{"type":"character","attributes":{},"value":["A list of projects.\n"]},{"type":"character","attributes":{},"value":["distill::distill_article"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2407,12 +2409,12 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 </head>
 
-<body class="layout-listing">
+<body>
 
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"Andrew Stewart's Technical Blog","authors":[]}
+{"title":"Projects","description":"A list of projects.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2434,209 +2436,56 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_navigation_before_body-->
 <!--radix_placeholder_site_before_body-->
 <!--/radix_placeholder_site_before_body-->
-<!--radix_placeholder_article_listing-->
-
-
-<script type="application/javascript">
-
-function init_posts_list() {
-
-  function load_image(img) {
-    var src = $(img).attr('data-src');
-    if (src) {
-      $(img).attr('src', src);
-      $(img).on("load", function() {
-        img.removeAttribute('data-src');
-      });
-    }
-  }
-
-  function set_posts_visible(posts, visible) {
-    if (visible) {
-
-      // show bottom border by default
-      $(posts).removeClass('post-preview-last');
-
-      // apply limits if need be
-      var max_posts = 25;
-      var apply_limits = $('.posts-container').hasClass('posts-apply-limit');
-      if (apply_limits && posts.length > max_posts) {
-        posts = $(posts).slice(0, max_posts);
-      } else {
-        $('.posts-more a').addClass('hidden');
-      }
-
-      // apply last style
-      $(posts.slice(-1)[0]).addClass('post-preview-last');
-
-      $(posts).removeClass('hidden');
-      $(posts).find('img[data-src]').each(function(i, img) {
-        load_image(img);
-      });
-    } else {
-      $(posts).addClass('hidden');
-    }
-  }
-
-  function apply_hash_filter() {
-
-    // clear active state
-    $('.categories .active').removeClass('active');
-
-    // mark all posts invisible to start
-    set_posts_visible($('.posts-list').children('a'), false);
-
-    // if we have a hash filter
-    if (window.location.hash && window.location.hash.startsWith("#category:")) {
-
-      // mark posts that match the category visible
-      var page_category = window.location.hash.replace(/^#category:/, "");
-      page_category = decodeURIComponent(page_category)
-      var posts = $('.post-metadata').map(function(idx, script) {
-        var metadata = $.parseJSON($(script).html());
-        var post = null;
-        $.each(metadata.categories, function(idx, category) {
-          category = category.replace(/ /g,"_");
-          if ((page_category || '').toLowerCase() === "articles" || category === page_category) {
-            post = $(script).parent().get();
-            return false;
-          }
-        });
-        return post;
-      });
-      set_posts_visible(posts, true);
-
-      // mark the hash active
-      $('.categories li>a[href="' + decodeURIComponent(window.location.hash) + '"]').addClass('active');
-
-      // update the list_caption
-      var list_caption = $('.posts-list-caption');
-      var caption = (page_category || '').toLowerCase() === "articles"
-        ? list_caption.attr('data-caption')
-        : ('Category: ' + page_category.replace(/_/g," "));
-      list_caption.text(caption);
-
-    } else {
-
-      // no hash filter, make all posts visible (subject to max display)
-      set_posts_visible($('.posts-list').children(), true);
-
-      // reset list caption
-      var list_caption = $('.posts-list-caption');
-      list_caption.text(list_caption.attr('data-caption'));
-
-
-    }
-  }
-
-  // more articles
-  function apply_post_limits(apply) {
-    if (apply) {
-      $('.posts-container').addClass('posts-apply-limit');
-      $('.posts-more a').removeClass('hidden');
-    } else {
-      $('.posts-container').removeClass('posts-apply-limit');
-      $('.posts-more a').addClass('hidden');
-    }
-  }
-
-  // click handling for tags
-  $('.dt-tag').click(function(ev) {
-    window.location.hash = '#category:' + $(this).text().replace(/ /g, "_");
-    return false;
-  })
-
-  // hash filter handling
-  apply_hash_filter();
-  $(window).on('hashchange',function() {
-    apply_post_limits(true);
-    apply_hash_filter();
-  });
-
-  // more articles link
-  $('.posts-more a').click(function(e) {
-    e.preventDefault();
-    apply_post_limits(false);
-    apply_hash_filter();
-    return false;
-  });
-
-}
-
-</script>
-
-
-
-<div class="posts-container posts-with-sidebar posts-apply-limit l-screen-inset">
-<div class="posts-list">
-<h1 class="posts-list-caption" data-caption="Andrew Stewart&#39;s Technical Blog">Andrew Stewart's Technical Blog</h1>
-<a href="posts/welcome/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":[]}</script>
-<div class="metadata">
-<div class="publishedDate">May 31, 2022</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>Welcome to Andrew Stewart's Technical Blog</h2>
-<div class="dt-tags"></div>
-<p>Welcome to our new blog, Andrew Stewart's Technical Blog. We hope you enjoy 
-reading what we have to say!</p>
-</div>
-</a>
-<a href="posts/2022-05-31-new-meltano-plugin-files-gitpod/" class="post-preview">
-<script class="post-metadata" type="text/json">{"categories":["data engineering","packages"]}</script>
-<div class="metadata">
-<div class="publishedDate">May 29, 2022</div>
-</div>
-<div class="thumbnail">
-<img/>
-</div>
-<div class="description">
-<h2>New Meltano plugin: files-gitpod</h2>
-<div class="dt-tags">
-<div class="dt-tag">data engineering</div>
-<div class="dt-tag">packages</div>
-</div>
-<p>A short description of the post.</p>
-</div>
-</a>
-</div>
-<div class="posts-sidebar">
-<div class="sidebar-section categories">
-<h3>Categories</h3>
-<ul>
-<li>
-<a href="#category:articles">articles</a>
-<span class="category-count">(2)</span>
-</li>
-<li>
-<a href="#category:data_engineering">data engineering</a>
-<span class="category-count">(1)</span>
-</li>
-<li>
-<a href="#category:packages">packages</a>
-<span class="category-count">(1)</span>
-</li>
-</ul>
-</div>
-</div>
-<div class="posts-more">
-<a href="#">More articles &raquo;</a>
-</div>
-</div>
-<!--/radix_placeholder_article_listing-->
 
 <div class="d-title">
-<h1>Andrew Stewart’s Technical Blog</h1>
+<h1>Projects</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-
+<p><p>A list of projects.</p></p>
 </div>
 
 
 <div class="d-article">
+<h2 id="projects">Projects</h2>
+<h3 id="ds4fnp">ds4fnp</h3>
+<p>Data Stacks For Fun &amp; Nonprofits is a series of articles and
+tutorials aimed towards designing and implementing a modern data stack
+using open source and open core components. The DS4FNP stack is intended
+to be accessible enough for education purposes (both in terms of costs
+and laptop-deployable), but suitably scalable as a mature analytics
+architecture for organizations of all sizes.</p>
+<p><a href="https://github.com/andrewcstewart/ds4fnp" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a href="https://andrewcstewart.github.io/ds4fnp/" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a></p>
+<h2 id="awesome-democracy-data"><code>awesome democracy data</code></h2>
+<p>A curated list of awesome data sources related to elections,
+electoral reforms, and democratic political systems.</p>
+<p><a href="https://github.com/andrewcstewart/awesome-democracy-data" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a href="https://andrewcstewart.github.io/awesome-democracy-data/" class="icon-link" target="_blank" rel="noopener"><i class="fas fa-globe"></i> Website</a></p>
+<h2 id="packages">Packages</h2>
+<h2 id="target-athena"><code>target-athena</code></h2>
+<p>Singer.io Target for AWS Athena.</p>
+<p><a href="https://github.com/MeltanoLabs/target-athena" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
+<h2 id="files-kedro"><code>files-kedro</code></h2>
+<p>Meltano project file bundle plugin for Kedro.</p>
+<p><a href="https://github.com/andrewcstewart/files-kedro" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
+<h2 id="files-gitpod"><code>files-gitpod</code></h2>
+<p>Meltano project file bundle for <a
+href="https://www.gitpod.io/">Gitpod</a>.</p>
+<p><a href="https://github.com/andrewcstewart/files-gitpod" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
+<h3 id="files-gha-ecr"><a
+href="https://github.com/andrewcstewart/files-gha-ecr">files-gha-ecr</a></h3>
+<p>Meltano project file bundle for Github Actions CI/CD that publishes
+to Amazon ECR.</p>
+<p><a href="https://github.com/andrewcstewart/files-gha-ecr" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
+<h3 id="dbt-uaparser"><a
+href="https://github.com/andrewcstewart/dbt-uaparser">dbt-uaparser</a></h3>
+<p>dbt package with macros for parsing User Agent strings.</p>
+<p><a href="https://github.com/andrewcstewart/dbt-uaparser" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a></p>
+<h1 id="misc">Misc</h1>
+<h2 id="diya-do-it-yourself-annotator"><code>DIYA</code> (Do It Yourself
+Annotator)</h2>
+<p><a href="https://github.com/andrewcstewart/diya" class="icon-link" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2660880/" class="icon-link" target="_blank" rel="noopener"><i class="ai ai-pubmed"></i> PubMed</a></p>
 <div class="sourceCode" id="cb1"><pre
 class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->

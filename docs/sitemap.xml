@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
-    <loc>https://andrewcstewart.github.io/about2.html</loc>
-    <lastmod>2022-05-31T23:02:45+00:00</lastmod>
-  </url>
-  <url>
     <loc>https://andrewcstewart.github.io/</loc>
-    <lastmod>2022-06-11T17:02:39+00:00</lastmod>
+    <lastmod>2022-06-19T19:44:47+00:00</lastmod>
   </url>
   <url>
     <loc>https://andrewcstewart.github.io/posts.html</loc>
     <lastmod>2022-05-31T23:02:45+00:00</lastmod>
+  </url>
+  <url>
+    <loc>https://andrewcstewart.github.io/projects.html</loc>
+    <lastmod>2022-06-20T03:40:58+00:00</lastmod>
   </url>
   <url>
     <loc>https://andrewcstewart.github.io/posts/welcome/</loc>
