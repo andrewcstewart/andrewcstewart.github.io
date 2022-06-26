@@ -1,0 +1,24 @@
+---
+title: Confusion Matrix ShinyApp
+description: |
+  Generating a confusion matrix in Shiny.
+author: Andrew Stewart
+date: '2019-12-28'
+categories:
+  - r
+  - shiny
+output:
+  distill::distill_article:
+    self_contained: false
+preview: screenshot.png
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![](screenshot.png)
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.

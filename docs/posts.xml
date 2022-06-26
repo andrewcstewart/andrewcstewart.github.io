@@ -7,7 +7,19 @@
     <description>Andrew Stewart's Technical Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 31 May 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 11 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>v0.1.0 of Meltano kedro plugin released</title>
+      <dc:creator>Andrew Stewart</dc:creator>
+      <link>https://andrewcstewart.github.io/posts/2022-06-11-v010-of-meltano-kedro-plugin-released</link>
+      <description>Integrating Kedro machine learning pipelines in your Meltano ELT projects.</description>
+      <category>data engineering</category>
+      <category>packages</category>
+      <category>machine learning</category>
+      <category>kedro</category>
+      <guid>https://andrewcstewart.github.io/posts/2022-06-11-v010-of-meltano-kedro-plugin-released</guid>
+      <pubDate>Sat, 11 Jun 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Welcome to Andrew Stewart's Technical Blog</title>
       <dc:creator>Andrew Stewart</dc:creator>
@@ -21,11 +33,22 @@ reading what we have to say!</description>
       <title>New Meltano plugin: files-gitpod</title>
       <dc:creator>Andrew Stewart</dc:creator>
       <link>https://andrewcstewart.github.io/posts/2022-05-31-new-meltano-plugin-files-gitpod</link>
-      <description>A short description of the post.</description>
+      <description>A plugin for adding a Gitpod configuration to a Meltano project.</description>
       <category>data engineering</category>
       <category>packages</category>
       <guid>https://andrewcstewart.github.io/posts/2022-05-31-new-meltano-plugin-files-gitpod</guid>
       <pubDate>Sun, 29 May 2022 00:00:00 +0000</pubDate>
+    </item>
+    <item>
+      <title>Confusion Matrix ShinyApp</title>
+      <dc:creator>Andrew Stewart</dc:creator>
+      <link>https://andrewcstewart.github.io/posts/2019-12-28-confusion-matrix-shinyapp</link>
+      <description>Generating a confusion matrix in Shiny.</description>
+      <category>r</category>
+      <category>shiny</category>
+      <guid>https://andrewcstewart.github.io/posts/2019-12-28-confusion-matrix-shinyapp</guid>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://andrewcstewart.github.io/posts/2019-12-28-confusion-matrix-shinyapp/screenshot.png" medium="image" type="image/png" width="2934" height="1844"/>
     </item>
   </channel>
 </rss>

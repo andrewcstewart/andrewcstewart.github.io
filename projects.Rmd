@@ -19,7 +19,7 @@ Data Stacks For Fun & Nonprofits is a series of articles and tutorials aimed tow
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/ds4fnp")`
 `r icon_link("globe", "Website", "https://andrewcstewart.github.io/ds4fnp/")`
 
-## `awesome democracy data`
+### `awesome democracy data`
 
 A curated list of awesome data sources related to elections, electoral reforms, and democratic political systems.
 
@@ -28,19 +28,27 @@ A curated list of awesome data sources related to elections, electoral reforms, 
 
 ## Packages
 
-## `target-athena`
+### `rdr`
+
+A Python package for managing Research Design Records.
+
+`r icon_link("python", "Package", "https://pypi.org/project/rdr/")`
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/rdr")`
+
+### `target-athena`
 
 Singer.io Target for AWS Athena. 
 
 `r icon_link("github", "Code", "https://github.com/MeltanoLabs/target-athena")`
+`r icon_link("globe", "Docs", "https://hub.meltano.com/targets/athena")`
 
-## `files-kedro`
+### `files-kedro`
 
 Meltano project file bundle plugin for Kedro.
 
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/files-kedro")`
 
-## `files-gitpod`
+### `files-gitpod`
 
 Meltano project file bundle for [Gitpod](https://www.gitpod.io/).
 
@@ -59,9 +67,22 @@ dbt package with macros for parsing User Agent strings.
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/dbt-uaparser")`
 
 
-# Misc
+## Apps
 
-## `DIYA` (Do It Yourself Annotator)
+### ConfusionMatrix
+
+A Shiny app for generating a confusion matrix from a table.
+
+`r icon_link("github", "Code", "https://github.com/andrewcstewart/confusion-matrix-app")`
+`r icon_link("book", "Docs", "https://andrewcstewart.github.io/confusion-matrix-app/")`
+`r icon_link("rocket-launch", "ShinyApp", "https://andrewcstewart.shinyapps.io/ConfusionMatrix/")`
+
+## Misc
+
+### `DIYA` (Do It Yourself Annotator)
+
+A modular, configurable bioinformatics pipeline for rapid annotation of bacterial genome sequences.
+
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/diya")`
 `r icon_link("pubmed", "PubMed", "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2660880/")`
 

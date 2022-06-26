@@ -1,0 +1,25 @@
+---
+title: v0.1.0 of Meltano kedro plugin released
+description: |
+  Integrating Kedro machine learning pipelines in your Meltano ELT projects.
+author:
+  - name: Andrew Stewart 
+date: '2022-06-11'
+categories:
+  - data engineering
+  - packages
+  - machine learning
+  - kedro
+output:
+  distill::distill_article:
+    self_contained: false
+draft: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Distill is a publication format for scientific and technical writing, native to the web.
+
+Learn more about using Distill at <https://rstudio.github.io/distill>.

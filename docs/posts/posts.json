@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2022-06-11-v010-of-meltano-kedro-plugin-released/",
+    "title": "v0.1.0 of Meltano kedro plugin released",
+    "description": "Integrating Kedro machine learning pipelines in your Meltano ELT projects.",
+    "author": [
+      {
+        "name": "Andrew Stewart",
+        "url": {}
+      }
+    ],
+    "date": "2022-06-11",
+    "categories": [
+      "data engineering",
+      "packages",
+      "machine learning",
+      "kedro"
+    ],
+    "contents": "\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-06-24T22:43:22+00:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/welcome/",
     "title": "Welcome to Andrew Stewart's Technical Blog",
     "description": "Welcome to our new blog, Andrew Stewart's Technical Blog. We hope you enjoy \nreading what we have to say!",
@@ -19,11 +41,11 @@
   {
     "path": "posts/2022-05-31-new-meltano-plugin-files-gitpod/",
     "title": "New Meltano plugin: files-gitpod",
-    "description": "A short description of the post.",
+    "description": "A plugin for adding a Gitpod configuration to a Meltano project.",
     "author": [
       {
         "name": "Andrew Stewart",
-        "url": "https://example.com/norajones"
+        "url": "https://andrewcstewart.github.io"
       }
     ],
     "date": "2022-05-29",
@@ -31,9 +53,31 @@
       "data engineering",
       "packages"
     ],
-    "contents": "\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "contents": "\nGitpod (https://www.gitpod.io/) is a great tool for spinning up\nfresh, disposable, containerized development environments built with\nCI/CD automation. It’s a fantastic development environment for\nMeltano.com projects.\nGetting started with Gitpod generally involves adding a\n.gitpod.yml configuration file to your project, as well as\nany supporting files (Dockerfiles, docker-compose configuration,\netc).\nI’ve put together a simple Meltano files plugin to add a\nbasic Gitpod setup to a Meltano project: https://github.com/andrewcstewart/files-gitpod\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-06-12T17:37:55+00:00",
+    "last_modified": "2022-06-24T22:12:30+00:00",
     "input_file": {}
+  },
+  {
+    "path": "posts/2019-12-28-confusion-matrix-shinyapp/",
+    "title": "Confusion Matrix ShinyApp",
+    "description": "Generating a confusion matrix in Shiny.",
+    "author": [
+      {
+        "name": "Andrew Stewart",
+        "url": {}
+      }
+    ],
+    "date": "2019-12-28",
+    "categories": [
+      "r",
+      "shiny"
+    ],
+    "contents": "\n\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
+    "preview": "posts/2019-12-28-confusion-matrix-shinyapp/screenshot.png",
+    "last_modified": "2022-06-24T22:32:22+00:00",
+    "input_file": {},
+    "preview_width": 2934,
+    "preview_height": 1844
   }
 ]

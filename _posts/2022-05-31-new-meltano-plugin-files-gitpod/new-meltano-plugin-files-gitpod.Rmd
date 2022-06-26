@@ -1,10 +1,10 @@
 ---
 title: "New Meltano plugin: files-gitpod"
 description: |
-  A short description of the post.
+  A plugin for adding a Gitpod configuration to a Meltano project.
 author:
   - name: Andrew Stewart
-    url: https://example.com/norajones
+    url: https://andrewcstewart.github.io
 date: 2022-05-29
 categories:
   - data engineering
@@ -19,8 +19,9 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Distill is a publication format for scientific and technical writing, native to the web.
+Gitpod (https://www.gitpod.io/) is a great tool for spinning up fresh, disposable, containerized development environments built with CI/CD automation.  It's a fantastic development environment for Meltano.com projects.
 
-Learn more about using Distill at <https://rstudio.github.io/distill>.
+Getting started with Gitpod generally involves adding a `.gitpod.yml` configuration file to your project, as well as any supporting files (Dockerfiles, docker-compose configuration, etc).
 
+I've put together a simple Meltano `files` plugin to add a basic Gitpod setup to a Meltano project: https://github.com/andrewcstewart/files-gitpod
 
