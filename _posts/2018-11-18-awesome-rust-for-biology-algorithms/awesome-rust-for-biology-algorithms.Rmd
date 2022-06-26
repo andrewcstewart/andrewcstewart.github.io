@@ -1,0 +1,23 @@
+---
+title: Awesome Rust for Biology Algorithms
+# description: |
+#   A short description of the post.
+author: Andrew Stewart
+date: '2018-11-18'
+categories:
+  - rust
+  - algorithms
+  - bioinformatics
+output:
+  distill::distill_article:
+    self_contained: false
+preview: https://raw.githubusercontent.com/sindresorhus/awesome/master/media/logo.svg?sanitize=true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+[Rust](https://www.rust-lang.org/en-US/) is increasingly being used for performant implementations of various algorithms, including those used in computational biology. Some examples include a minhash algorithm implemented by [OneCodex](https://onecodex.com/) and a pseudo-aligner by [10X Genomics](https://github.com/10XGenomics/rust-debruijn).
+
+I thought it would be useful to start compiling a collection of these rust implementations as they appear, and so I've started an [awesome-rust-biology-algorithms](https://github.com/SequenceFlow/awesome-rust-biology-algorithms) list to track them.

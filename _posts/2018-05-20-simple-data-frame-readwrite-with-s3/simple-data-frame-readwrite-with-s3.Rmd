@@ -1,0 +1,62 @@
+---
+title: Simple data frame read/write with S3
+description: |
+  Being able to conveniently exchange data sets via S3 in either R or Python can really aid reproducibility.
+author: Andrew Stewart
+date: '2018-05-20'
+categories:
+  - r
+  - python
+output:
+  distill::distill_article:
+    self_contained: false
+    # highlight: haddock
+    # highlight_downlit: false    
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Everyone is always asking the age old question: R or Python? Why not both? I refuse to choose! They each have their own strengths and weaknesses, and I often find myself seamlessly interweaving between the two depending on the task at hand.
+
+Being ambidextrous with R and Python has never been easier, as cross-pollination across the two languages has resulted in many of the same constructs now existing for both. For example, data frame implementations such as `pandas` and `tibble` are largely converging on many of the same patterns and tooling. One of the most important features for interoperability is being able to serialize and de-serialize data frames between the two - which both readily do natively via CSV or similar formats. Both can also transmit data via mirrored connectors for all sorts of various databases. There are even projects like [feather](https://blog.rstudio.com/2016/03/29/feather/) which are specifically targeted towards inter-language serialization between R and Python.
+
+But what about S3? Whenever I'm handling even moderately large data sets, it's incredibly convenient to simply stash files in an S3 bucket. Doing so also helps advance the cause of reproducible research, since S3 objects have universally accessible, unique URLs and most folks are likely to have AWS credentials already setup from the AWS CLI or similar.
+
+So how can one easily use S3 as a conduit for exchanging data sets between sessions and even between languages like Python and R? It would be fairly simple to just read/write a file that can be downloaded/uploaded from S3, but it turns out there are some very convenient libraries to help streamline the process.
+
+For R, there's the `aws.s3` package, which is part of the larger `cloudyr` project (basically `boto` for R). There are all kinds of nice functions in this package, but one of my favorite is `s3read_using`, which allows you to utilize your own file parser such as `read_csv` from `tidyverse`/`readr`. The example below illustrates how to load the contents of an S3 object into a `data.frame`, all with one line of code.
+
+``` r
+library(tidyverse)
+library("aws.s3")
+
+df <- aws.s3::s3read_using(read_csv, object = "s3://acs-blog-data/iris.csv")
+```
+
+Likewise, we can write our data frames to S3 using `s3write_using`:
+
+``` r
+aws.s3::s3write_using(iris, write_csv, object = "s3://acs-blog-data/iris.csv")
+```
+
+We can do the same thing in Python by combining pandas with the handy `s3fs` package, which sits on top of `boto3`.
+
+``` python
+import s3fs
+import pandas as pd
+
+s3 = s3fs.S3FileSystem(anon=False)
+with s3.open("s3://acs-blog-data/iris.csv") as f:
+    df = pd.read_csv(f)
+```
+
+Similarly, writing to S3 should be as simple as the following example, although I've initially encountered an error.
+
+``` python
+with s3.open("s3://acs-blog-data/iris.csv", 'wb') as f:
+    df.write_csv(f)
+```
+
+Being able to conveniently exchange data sets via S3 in either R or Python can really aid reproducibility. Jupyter Notebooks and RMarkdown files can be shared via conventional version control, while sharing of potentially large data sets can be done over S3.

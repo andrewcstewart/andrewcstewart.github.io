@@ -50,5 +50,27 @@ reading what we have to say!</description>
       <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       <media:content url="https://andrewcstewart.github.io/posts/2019-12-28-confusion-matrix-shinyapp/screenshot.png" medium="image" type="image/png" width="2934" height="1844"/>
     </item>
+    <item>
+      <title>Awesome Rust for Biology Algorithms</title>
+      <dc:creator>Andrew Stewart</dc:creator>
+      <link>https://andrewcstewart.github.io/posts/2018-11-18-awesome-rust-for-biology-algorithms</link>
+      <description>Awesome Rust for Biology Algorithms</description>
+      <category>rust</category>
+      <category>algorithms</category>
+      <category>bioinformatics</category>
+      <guid>https://andrewcstewart.github.io/posts/2018-11-18-awesome-rust-for-biology-algorithms</guid>
+      <pubDate>Sun, 18 Nov 2018 00:00:00 +0000</pubDate>
+      <media:content url="https://raw.githubusercontent.com/sindresorhus/awesome/master/media/logo.svg?sanitize=true" medium="image" type="text/plain"/>
+    </item>
+    <item>
+      <title>Simple data frame read/write with S3</title>
+      <dc:creator>Andrew Stewart</dc:creator>
+      <link>https://andrewcstewart.github.io/posts/2018-05-20-simple-data-frame-readwrite-with-s3</link>
+      <description>Being able to conveniently exchange data sets via S3 in either R or Python can really aid reproducibility.</description>
+      <category>r</category>
+      <category>python</category>
+      <guid>https://andrewcstewart.github.io/posts/2018-05-20-simple-data-frame-readwrite-with-s3</guid>
+      <pubDate>Sun, 20 May 2018 00:00:00 +0000</pubDate>
+    </item>
   </channel>
 </rss>

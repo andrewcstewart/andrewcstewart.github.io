@@ -79,5 +79,46 @@
     "input_file": {},
     "preview_width": 2934,
     "preview_height": 1844
+  },
+  {
+    "path": "posts/2018-11-18-awesome-rust-for-biology-algorithms/",
+    "title": "Awesome Rust for Biology Algorithms",
+    "description": {},
+    "author": [
+      {
+        "name": "Andrew Stewart",
+        "url": {}
+      }
+    ],
+    "date": "2018-11-18",
+    "categories": [
+      "rust",
+      "algorithms",
+      "bioinformatics"
+    ],
+    "contents": "\nRust is increasingly\nbeing used for performant implementations of various algorithms,\nincluding those used in computational biology. Some examples include a\nminhash algorithm implemented by OneCodex and a pseudo-aligner by 10X\nGenomics.\nI thought it would be useful to start compiling a collection of these\nrust implementations as they appear, and so I’ve started an awesome-rust-biology-algorithms\nlist to track them.\n\n\n\n",
+    "preview": "https://raw.githubusercontent.com/sindresorhus/awesome/master/media/logo.svg?sanitize=true",
+    "last_modified": "2022-06-26T21:52:09+00:00",
+    "input_file": "awesome-rust-for-biology-algorithms.knit.md"
+  },
+  {
+    "path": "posts/2018-05-20-simple-data-frame-readwrite-with-s3/",
+    "title": "Simple data frame read/write with S3",
+    "description": "Being able to conveniently exchange data sets via S3 in either R or Python can really aid reproducibility.",
+    "author": [
+      {
+        "name": "Andrew Stewart",
+        "url": {}
+      }
+    ],
+    "date": "2018-05-20",
+    "categories": [
+      "r",
+      "python"
+    ],
+    "contents": "\nEveryone is always asking the age old question: R or Python? Why not\nboth? I refuse to choose! They each have their own strengths and\nweaknesses, and I often find myself seamlessly interweaving between the\ntwo depending on the task at hand.\nBeing ambidextrous with R and Python has never been easier, as\ncross-pollination across the two languages has resulted in many of the\nsame constructs now existing for both. For example, data frame\nimplementations such as pandas and tibble are\nlargely converging on many of the same patterns and tooling. One of the\nmost important features for interoperability is being able to serialize\nand de-serialize data frames between the two - which both readily do\nnatively via CSV or similar formats. Both can also transmit data via\nmirrored connectors for all sorts of various databases. There are even\nprojects like feather which\nare specifically targeted towards inter-language serialization between R\nand Python.\nBut what about S3? Whenever I’m handling even moderately large data\nsets, it’s incredibly convenient to simply stash files in an S3 bucket.\nDoing so also helps advance the cause of reproducible research, since S3\nobjects have universally accessible, unique URLs and most folks are\nlikely to have AWS credentials already setup from the AWS CLI or\nsimilar.\nSo how can one easily use S3 as a conduit for exchanging data sets\nbetween sessions and even between languages like Python and R? It would\nbe fairly simple to just read/write a file that can be\ndownloaded/uploaded from S3, but it turns out there are some very\nconvenient libraries to help streamline the process.\nFor R, there’s the aws.s3 package, which is part of the\nlarger cloudyr project (basically boto for R).\nThere are all kinds of nice functions in this package, but one of my\nfavorite is s3read_using, which allows you to utilize your\nown file parser such as read_csv from\ntidyverse/readr. The example below illustrates\nhow to load the contents of an S3 object into a data.frame,\nall with one line of code.\nlibrary(tidyverse)\nlibrary(\"aws.s3\")\n\ndf <- aws.s3::s3read_using(read_csv, object = \"s3://acs-blog-data/iris.csv\")\nLikewise, we can write our data frames to S3 using\ns3write_using:\naws.s3::s3write_using(iris, write_csv, object = \"s3://acs-blog-data/iris.csv\")\nWe can do the same thing in Python by combining pandas with the handy\ns3fs package, which sits on top of boto3.\nimport s3fs\nimport pandas as pd\n\ns3 = s3fs.S3FileSystem(anon=False)\nwith s3.open(\"s3://acs-blog-data/iris.csv\") as f:\n    df = pd.read_csv(f)\nSimilarly, writing to S3 should be as simple as the following\nexample, although I’ve initially encountered an error.\nwith s3.open(\"s3://acs-blog-data/iris.csv\", 'wb') as f:\n    df.write_csv(f)\nBeing able to conveniently exchange data sets via S3 in either R or\nPython can really aid reproducibility. Jupyter Notebooks and RMarkdown\nfiles can be shared via conventional version control, while sharing of\npotentially large data sets can be done over S3.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-06-26T21:33:53+00:00",
+    "input_file": "simple-data-frame-readwrite-with-s3.knit.md"
   }
 ]
