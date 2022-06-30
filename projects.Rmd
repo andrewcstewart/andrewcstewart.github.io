@@ -32,8 +32,8 @@ A curated list of awesome data sources related to elections, electoral reforms, 
 
 A Python package for managing Research Design Records.
 
-`r icon_link("python", "Package", "https://pypi.org/project/rdr/")`
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/rdr")`
+`r icon_link("python", "Package", "https://pypi.org/project/rdr/")`
 
 ### `target-athena`
 
@@ -47,12 +47,14 @@ Singer.io Target for AWS Athena.
 Meltano project file bundle plugin for Kedro.
 
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/files-kedro")`
+`r icon_link("python", "Package", "https://pypi.org/project/files-kedro/")`
 
 ### `files-gitpod`
 
 Meltano project file bundle for [Gitpod](https://www.gitpod.io/).
 
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/files-gitpod")`
+`r icon_link("python", "Package", "https://pypi.org/project/files-gitpod/")`
 
 ### [files-gha-ecr](https://github.com/andrewcstewart/files-gha-ecr)
 
