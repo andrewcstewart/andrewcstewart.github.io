@@ -1,7 +1,7 @@
 ---
 title: Awesome Rust for Biology Algorithms
-# description: |
-#   A short description of the post.
+description: |
+  Rust is increasingly being used for performant implementations of various algorithms, including those used in computational biology
 author: Andrew Stewart
 date: '2018-11-18'
 categories:

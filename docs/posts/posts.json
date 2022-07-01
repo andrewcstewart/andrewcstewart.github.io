@@ -1,5 +1,26 @@
 [
   {
+    "path": "posts/2022-07-01-v010-of-dbt-uaparser-released/",
+    "title": "v0.1.0 of dbt-uaparser released",
+    "description": "User-Agent strings encode information about users that visit sites.  This `dbt` package implements a User Defined Function that leverages UA parsing code that can be used within database queries.",
+    "author": [
+      {
+        "name": "Andrew Stewart",
+        "url": {}
+      }
+    ],
+    "date": "2022-07-01",
+    "categories": [
+      "dbt",
+      "data engineering",
+      "packages"
+    ],
+    "contents": "\nUser-Agent strings encode information about users that visit sites,\nincluding things like OS, device model, version numbers, etc.\nSome examples:\nMozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/536.11 (KHTML, like Gecko) Chrome/20.0.1132.57 Safari/536.11\nMozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) RockMelt/0.8.36.78 Chrome/7.0.517.44 Safari/534.7\nMozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; ja-jp) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16\nMozilla/5.0 (Macintosh; U; PPC Mac OS X 10_4_11; de-de) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.16\nMozilla/5.0 (Macintosh; U; Intel Mac OS X 10_7; en-us) AppleWebKit/533.4 (KHTML, like Gecko) Version/4.1 Safari/533.4\nMozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_2; nb-no) AppleWebKit/533.16 (KHTML, like Gecko) Version/4.1 Safari/533.1\nParsing these strings from log data can often get complicated. When\nprocessing this kind of data within a data warehouse context, you likely\nfind yourself trying to cobble together a nested mess of string parsing\nfunctions and conditional logic to account for any possible string you\nmay encounter. This is a great use case for User Defined\nFunctions (UDFs), which typically allow one to define custom\nroutines that can be used like native instructions in-database.\nDepending on the database engine, these may just be essentially SQL\nmacros, or they may allow you to leverage other languages like\nJavascript or Python.\nEven with UDFs, the amount of logic needed to define robust UA\nparsing functions can be intimidating to manage. Fortunately there are\nalready many comprehensive parsing libraries out there that account for\nall the different formats and structures one may run into when parsing\nUA strings. Using Snowflake\nas an example, we can define a UDF that interfaces with a UA\nparser:\n\n\n\nOnce the UDF has been defined, we can use it within our queries like\nthis:\n\n\n\nUsing dbt we can define a macro\nthat will create this UDF in our data warehouse. I authored a dbt packge\nthat does exactly that: https://github.com/andrewcstewart/dbt-uaparser\nThis dbt package implements a User Defined Function that\nleverages the UA parsing code from https://faisalman.github.io/ua-parser-js/. You can find\nthe documentation here.\n\n\n\n",
+    "preview": {},
+    "last_modified": "2022-07-01T19:20:09+00:00",
+    "input_file": {}
+  },
+  {
     "path": "posts/2022-06-11-v010-of-meltano-kedro-plugin-released/",
     "title": "v0.1.0 of Meltano kedro plugin released",
     "description": "Integrating Kedro machine learning pipelines in your Meltano ELT projects.",
@@ -18,7 +39,7 @@
     ],
     "contents": "\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-06-24T22:43:22+00:00",
+    "last_modified": "2022-07-01T19:20:30+00:00",
     "input_file": {}
   },
   {
@@ -53,9 +74,9 @@
       "data engineering",
       "packages"
     ],
-    "contents": "\nGitpod (https://www.gitpod.io/) is a great tool for spinning up\nfresh, disposable, containerized development environments built with\nCI/CD automation. It’s a fantastic development environment for\nMeltano.com projects.\nGetting started with Gitpod generally involves adding a\n.gitpod.yml configuration file to your project, as well as\nany supporting files (Dockerfiles, docker-compose configuration,\netc).\nI’ve put together a simple Meltano files plugin to add a\nbasic Gitpod setup to a Meltano project: https://github.com/andrewcstewart/files-gitpod\n\n\n\n",
+    "contents": "\nGitpod (https://www.gitpod.io/) is a great tool for spinning up\nfresh, disposable, containerized development environments built with\nCI/CD automation. It’s a fantastic development environment for\nMeltano.com projects.\nGetting started with Gitpod generally involves adding a\n.gitpod.yml configuration file to your project, as well as\nany supporting files (Dockerfiles, docker-compose configuration,\netc).\nI put together a simple Meltano files plugin to add a\nbasic Gitpod setup to a Meltano project: https://github.com/andrewcstewart/files-gitpod\n\n\n\n",
     "preview": {},
-    "last_modified": "2022-06-24T22:12:30+00:00",
+    "last_modified": "2022-07-01T19:14:08+00:00",
     "input_file": {}
   },
   {
@@ -75,7 +96,7 @@
     ],
     "contents": "\n\nDistill is a publication format for scientific and technical writing,\nnative to the web.\nLearn more about using Distill at https://rstudio.github.io/distill.\n\n\n\n",
     "preview": "posts/2019-12-28-confusion-matrix-shinyapp/screenshot.png",
-    "last_modified": "2022-06-24T22:32:22+00:00",
+    "last_modified": "2022-07-01T19:17:19+00:00",
     "input_file": {},
     "preview_width": 2934,
     "preview_height": 1844
@@ -83,7 +104,7 @@
   {
     "path": "posts/2018-11-18-awesome-rust-for-biology-algorithms/",
     "title": "Awesome Rust for Biology Algorithms",
-    "description": {},
+    "description": "Rust is increasingly being used for performant implementations of various algorithms, including those used in computational biology",
     "author": [
       {
         "name": "Andrew Stewart",
@@ -98,7 +119,7 @@
     ],
     "contents": "\nRust is increasingly\nbeing used for performant implementations of various algorithms,\nincluding those used in computational biology. Some examples include a\nminhash algorithm implemented by OneCodex and a pseudo-aligner by 10X\nGenomics.\nI thought it would be useful to start compiling a collection of these\nrust implementations as they appear, and so I’ve started an awesome-rust-biology-algorithms\nlist to track them.\n\n\n\n",
     "preview": "https://raw.githubusercontent.com/sindresorhus/awesome/master/media/logo.svg?sanitize=true",
-    "last_modified": "2022-06-26T21:52:09+00:00",
+    "last_modified": "2022-07-01T19:30:56+00:00",
     "input_file": {}
   },
   {

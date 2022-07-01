@@ -7,7 +7,18 @@
     <description>Andrew Stewart's Technical Blog
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 11 Jun 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Jul 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>v0.1.0 of dbt-uaparser released</title>
+      <dc:creator>Andrew Stewart</dc:creator>
+      <link>https://andrewcstewart.github.io/posts/2022-07-01-v010-of-dbt-uaparser-released</link>
+      <description>User-Agent strings encode information about users that visit sites.  This `dbt` package implements a User Defined Function that leverages UA parsing code that can be used within database queries.</description>
+      <category>dbt</category>
+      <category>data engineering</category>
+      <category>packages</category>
+      <guid>https://andrewcstewart.github.io/posts/2022-07-01-v010-of-dbt-uaparser-released</guid>
+      <pubDate>Fri, 01 Jul 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>v0.1.0 of Meltano kedro plugin released</title>
       <dc:creator>Andrew Stewart</dc:creator>
@@ -54,7 +65,7 @@ reading what we have to say!</description>
       <title>Awesome Rust for Biology Algorithms</title>
       <dc:creator>Andrew Stewart</dc:creator>
       <link>https://andrewcstewart.github.io/posts/2018-11-18-awesome-rust-for-biology-algorithms</link>
-      <description>Awesome Rust for Biology Algorithms</description>
+      <description>Rust is increasingly being used for performant implementations of various algorithms, including those used in computational biology</description>
       <category>rust</category>
       <category>algorithms</category>
       <category>bioinformatics</category>
