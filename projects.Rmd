@@ -67,6 +67,7 @@ Meltano project file bundle for Github Actions CI/CD that publishes to Amazon EC
 dbt package with macros for parsing User Agent strings.
 
 `r icon_link("github", "Code", "https://github.com/andrewcstewart/dbt-uaparser")`
+`r icon_link("book", "Docs", "https://hub.getdbt.com/andrewcstewart/uaparser/latest/")`
 
 
 ## Apps

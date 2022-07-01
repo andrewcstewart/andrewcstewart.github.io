@@ -23,5 +23,5 @@ Gitpod (https://www.gitpod.io/) is a great tool for spinning up fresh, disposabl
 
 Getting started with Gitpod generally involves adding a `.gitpod.yml` configuration file to your project, as well as any supporting files (Dockerfiles, docker-compose configuration, etc).
 
-I've put together a simple Meltano `files` plugin to add a basic Gitpod setup to a Meltano project: https://github.com/andrewcstewart/files-gitpod
+I put together a simple Meltano `files` plugin to add a basic Gitpod setup to a Meltano project: https://github.com/andrewcstewart/files-gitpod
 
