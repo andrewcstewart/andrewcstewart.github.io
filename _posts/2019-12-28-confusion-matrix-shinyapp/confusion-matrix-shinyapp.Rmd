@@ -18,3 +18,5 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 ![](screenshot.png)
+
+Confusion matrices are used frequently in machine learning to evaluate the classification performance of a model.
